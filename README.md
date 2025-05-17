@@ -52,4 +52,4 @@ it will contain key - value pairs, the key is used as input once selected.
 - This node uses a custom DOM Widget and custom routes.
 - It's created as request from a use in the L2 discord channel from matteo/qubic
 - not yet in comfyuimanager
-- it's created by telling Claude 3.7 sonnet what to do, with multiple round of "it does not work, fix it" i was just too lazy to read the code, so I have no idea what how it does it
+- it's created by telling Claude 3.7 sonnet what to do, with multiple round of "it does not work, fix it" i was just too lazy to read the code, so I have no idea what how it does it (just kidding, I still had to read the code to steer ai to do whatever...)
