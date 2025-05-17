@@ -1,6 +1,6 @@
 # Select key from JSON (Alpha)
 ![Node example](./example_workflows/demo.jpg)
-!workflow](./example_workflows/demo.png)
+![workflow download ](./example_workflows/demo.png)
 
 ## What does this do ?
 - this node lists json files in the ComfyUI input folder
@@ -27,6 +27,26 @@ in
 with git installed:
 ```git clone  https://github.com/erosDiffusion/ComfyUI-enricos-json-file-load-and-value-selector.git ```
 into your custom nodes folder 
+
+### Example JSON File
+it will contain key - value pairs, the key is used as input once selected.
+```
+{
+  "name": "Enrico",
+  "age": "old enough",
+  "city": "Rome",
+  "country": "IT",
+  "email": "erosdiffusionai@example.com",
+  "occupation": "Engineer",
+  "hobby": "Comfy",
+  "favorite_color": "Purple",
+  "pet": "Dragon",
+  "status": "Active"
+}
+
+```
+
+
 
 ### Trivia:
 This node uses a custom DOM Widget and custom routes.
