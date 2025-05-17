@@ -1,0 +1,133 @@
+{
+  "id": "0d915bff-89ae-42f0-8b28-35ff107375d8",
+  "revision": 0,
+  "last_node_id": 3,
+  "last_link_id": 1,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "ShowText|pysssss",
+      "pos": [
+        250,
+        -550
+      ],
+      "size": [
+        350,
+        88
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "widget_ue_connectable": {},
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "email"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "SelectorNode",
+      "pos": [
+        -200,
+        -550
+      ],
+      "size": [
+        350,
+        500
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "erosDiffusion/ComfyUI-enricos-json-file-load-and-value-selector",
+        "ver": "5c0ba3d1d34705ab174f5af1c92faa06024c757a",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "email",
+        ""
+      ]
+    },
+    {
+      "id": 3,
+      "type": "MarkdownNote",
+      "pos": [
+        250,
+        -400
+      ],
+      "size": [
+        550,
+        100
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "- this node lists json files from the input folder\n- then shows key value pairs from the file\n- upon selecting one key value pair, the key is set in the node input (free string input)"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 1.1671841070450009,
+      "offset": [
+        441.5481543984092,
+        737.2345418271912
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.19.9",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
