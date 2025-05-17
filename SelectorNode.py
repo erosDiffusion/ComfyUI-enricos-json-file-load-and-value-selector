@@ -6,8 +6,9 @@ from aiohttp import web
 
 # Define API endpoints outside the node class
 @PromptServer.instance.routes.get("/api/enricos/selector/list_files")
-async def list_files(request):
+async def list_files(request):    
     """API endpoint to list files in the input directory"""
+    print("Listing files in the input directory")
     # Use the correct path to the ComfyUI input directory 
     comfy_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     input_dir = os.path.join(comfy_path, "input")
@@ -26,7 +27,9 @@ async def list_files(request):
 
 @PromptServer.instance.routes.get("/api/enricos/selector/get_file_content")
 async def get_file_content(request):
+    
     """API endpoint to get the content of a specific file"""
+    print("Getting file content") 
     filename = request.query.get("filename")
     if not filename:
         return web.json_response({"error": "Filename parameter is required"}, status=400)

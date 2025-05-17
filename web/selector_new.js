@@ -14,7 +14,8 @@ app.registerExtension({
 
         // Store original methods
         const onExecuted = nodeType.prototype.onExecuted;
-          // Override the node creation method
+        
+        // Override the node creation method
         nodeType.prototype.onNodeCreated = function() {
             // When the node is created in the graph
             
@@ -168,7 +169,9 @@ app.registerExtension({
             
             // Set a reasonable size for the node
             this.setSize([300, 180]);
-        };          // Handle node removal
+        };
+        
+        // Handle node removal
         nodeType.prototype.onRemoved = function() {
             try {
                 // Clean up event listeners
@@ -187,7 +190,8 @@ app.registerExtension({
                 console.warn("Error during SelectorNode cleanup:", error);
             }
         }
-        // Add methods to load data from the API        // Load files from the API endpoint
+        
+        // Load files from the API endpoint
         nodeType.prototype.loadFiles = async function() {
             try {
                 if (!this.fileSelect) {
@@ -206,7 +210,8 @@ app.registerExtension({
                         this.refreshButton.innerText = originalText;
                         this.refreshButton.disabled = false;
                     }, 2000);
-                }                
+                }
+                
                 // Use the correct API endpoint path to match the Python backend
                 const response = await api.fetchApi("/api/enricos/selector/list_files");
                 
@@ -214,11 +219,11 @@ app.registerExtension({
                 if (!response.ok) {
                     throw new Error(`Server returned ${response.status}: ${response.statusText}`);
                 }
-                  // Safe JSON parsing with better error handling
+                
+                // Safe JSON parsing with better error handling
                 let data;
                 try {
-                    // Use a single method to read the response to avoid 
-                    // "body stream already read" errors
+                    // Use a single method to read the response
                     data = await response.json();
                 } catch (parseError) {
                     console.error("JSON parsing error:", parseError);
@@ -257,13 +262,15 @@ app.registerExtension({
                             this.findFileContainingKey(this.initialValue);
                         }
                     }
-                }            } catch (error) {
+                }
+            } catch (error) {
                 console.error("Error loading files:", error);
                 if (this.fileSelect) {
                     // Clear existing options
                     while (this.fileSelect.options.length > 0) {
                         this.fileSelect.remove(0);
-                    }                
+                    }
+                    
                     const errorOption = document.createElement("option");
                     // Add more specific error message to help with debugging
                     errorOption.text = `Error: ${error.message || "Unknown error"}`;
@@ -284,9 +291,11 @@ app.registerExtension({
             // Go through each file and check if it contains the key
             for (let i = 1; i < this.fileSelect.options.length; i++) {
                 if (!this.fileSelect.options[i]) continue;
-                  const fileName = this.fileSelect.options[i].value;
+                
+                const fileName = this.fileSelect.options[i].value;
                 if (!fileName) continue;
-                  try {
+                
+                try {
                     const response = await api.fetchApi(`/api/enricos/selector/get_file_content?filename=${encodeURIComponent(fileName)}`);
                     
                     // Handle possible error responses
