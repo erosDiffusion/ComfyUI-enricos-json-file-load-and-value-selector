@@ -16,6 +16,9 @@ To install the node via manager
 - choose the option "Install via Git URL"
 - paste: https://github.com/erosDiffusion/ComfyUI-enricos-json-file-load-and-value-selector.git
 
+## Node Name
+search "Selector" from the node list.
+
 ### Note
 For this to work you need to set
 ```security_level = weak ```
