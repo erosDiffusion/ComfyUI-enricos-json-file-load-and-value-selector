@@ -1,14 +1,12 @@
 # Select key from JSON (Alpha)
-
-![workflow](./example_workflows/demo.jpg)
-
-
+![Node example](./example_workflows/demo.jpg)
+!workflow](./example_workflows/demo.png)
 
 ## What does this do ?
 - this node lists json files in the ComfyUI input folder
 - shows a dropdown where you can select such a node
 - reads  the content of the file (key value pairs)
-- shows the key/value pair in a dropdown
+- shows the key/value pair in a dropdownhttps://github.com/erosDiffusion/ComfyUI-enricos-json-file-load-and-value-selector/blob/master/README.md
 - when you select the dropdown the "motion" field is populated with the key corresponding to the selection
 - when you run the node the text is submitted as output (you can also input free text)
 
