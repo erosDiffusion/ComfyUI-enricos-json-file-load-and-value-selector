@@ -18,8 +18,8 @@ async def list_files(request):
         if not os.path.exists(input_dir):
             os.makedirs(input_dir)
             
-        # List files in the directory
-        files = [f for f in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, f))]
+        # List only JSON files in the directory
+        files = [f for f in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, f)) and f.lower().endswith('.json')]
         
         return web.json_response({"files": files})
     except Exception as e:
