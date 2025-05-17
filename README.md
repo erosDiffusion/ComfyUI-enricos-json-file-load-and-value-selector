@@ -10,14 +10,16 @@
 - when you select the dropdown the "motion" field is populated with the key corresponding to the selection
 - when you run the node the text is submitted as output (you can also input free text)
 
+## What is the name of the node in Comfy ?
+the name is "Selector", search "Selector" from the node list
+
+
 ## Install
 To install the node via manager 
 - open the comfy ui manager popup 
 - choose the option "Install via Git URL"
 - paste: https://github.com/erosDiffusion/ComfyUI-enricos-json-file-load-and-value-selector.git
 
-## Node Name
-search "Selector" from the node list.
 
 ### Note
 For this to work you need to set
