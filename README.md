@@ -36,7 +36,7 @@ it will contain key - value pairs, the key is used as input once selected.
   "age": "old enough",
   "city": "Rome",
   "country": "IT",
-  "email": "erosdiffusionai@example.com",
+  "email": "erosdiffusionai@gmail.com",
   "occupation": "Engineer",
   "hobby": "Comfy",
   "favorite_color": "Purple",
