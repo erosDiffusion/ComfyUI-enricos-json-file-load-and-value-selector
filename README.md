@@ -1,5 +1,9 @@
 # Select key from JSON (Alpha)
 
+![workflow](./example_workflows/demo.jpg)
+
+
+
 ## What does this do ?
 - this node lists json files in the ComfyUI input folder
 - shows a dropdown where you can select such a node
