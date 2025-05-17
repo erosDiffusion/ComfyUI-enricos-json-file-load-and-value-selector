@@ -3,10 +3,10 @@
 [workflow download ](./example_workflows/demo.png)
 
 ## What does this do ?
-- this node lists json files in the ComfyUI input folder
-- shows a dropdown where you can select such a node
-- reads  the content of the file (key value pairs)
-- shows the key/value pair in a dropdownhttps://github.com/erosDiffusion/ComfyUI-enricos-json-file-load-and-value-selector/blob/master/README.md
+- this node lists ```json``` files in the ComfyUI ```input``` folder
+- shows a dropdown where you can select such a file
+- reads the content of the file (key value pairs)
+- shows the key/value pair in a dropdown
 - when you select the dropdown the "motion" field is populated with the key corresponding to the selection
 - when you run the node the text is submitted as output (you can also input free text)
 
@@ -49,4 +49,7 @@ it will contain key - value pairs, the key is used as input once selected.
 
 
 ### Trivia:
-This node uses a custom DOM Widget and custom routes.
+- This node uses a custom DOM Widget and custom routes.
+- It's created as request from a use in the L2 discord channel from matteo/qubic
+- not yet in comfyuimanager
+- it's created by telling Claude 3.7 sonnet what to do, with multiple round of "it does not work, fix it" i was just too lazy to read the code, so I have no idea what how it does it
