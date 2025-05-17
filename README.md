@@ -1,6 +1,6 @@
 # Select key from JSON (Alpha)
 ![Node example](./example_workflows/demo.jpg)
-![workflow download ](./example_workflows/demo.png)
+[workflow download ](./example_workflows/demo.png)
 
 ## What does this do ?
 - this node lists json files in the ComfyUI input folder
